@@ -1,3 +1,8 @@
+<!-- ===== PAGE LOADER ===== -->
+<div class="page-loader" [class.loader-hidden]="isLoaded">
+  <img src="assets/logo-ttp.png" alt="TTP Cargando…" class="loader-logo">
+</div>
+
 <!-- ===== NAVBAR ===== -->
 <nav class="navbar" id="top">
   <div class="nav-container">
@@ -13,7 +18,7 @@
       <a href="#requisitos" (click)="closeMenu()">Requisitos</a>
       <a href="#contacto" (click)="closeMenu()">Contacto</a>
       <a href="https://wa.me/573137733408?text=Hola%2C%20quisiera%20información%20sobre%20trámites%20de%20tránsito"
-         target="_blank" rel="noopener" class="btn-nav-cta">
+        target="_blank" rel="noopener" class="btn-nav-cta">
         <span class="wa-icon">💬</span> WhatsApp
       </a>
     </div>
@@ -28,11 +33,12 @@
     <img src="assets/logo-ttp.png" alt="TTP" class="hero-logo" loading="eager">
     <p class="hero-tagline">Trámites ante la Secretaría de Tránsito de Pasto</p>
     <p class="hero-sub">
-      Traspaso de vehículos, levantamiento de prenda, salida de patios y más. <strong>Nosotros hacemos todo por ti</strong> sin que tengas que hacer filas ni perder el día.
+      Traspaso de vehículos, levantamiento de prenda, salida de patios, regrabaciones y más. <strong>Nosotros hacemos
+        todo por ti</strong> sin que tengas que hacer filas ni perder el día.
     </p>
     <div class="hero-ctas">
       <a href="https://wa.me/573137733408?text=Hola%2C%20quisiera%20información%20sobre%20un%20trámite%20de%20tránsito"
-         target="_blank" rel="noopener" class="btn-primary">
+        target="_blank" rel="noopener" class="btn-primary">
         💬 Escríbenos al WhatsApp
       </a>
       <a href="#servicios" class="btn-outline">Ver servicios</a>
@@ -71,17 +77,20 @@
       <div class="why-card">
         <div class="why-icon">⚡</div>
         <h3>Rapidez Garantizada</h3>
-        <p>Gestionamos tu trámite sin que pierdas tiempo en filas. Recogemos y entregamos documentos a domicilio en Pasto.</p>
+        <p>Gestionamos tu trámite sin que pierdas tiempo en filas. Recogemos y entregamos documentos a domicilio en
+          Pasto.</p>
       </div>
       <div class="why-card highlight">
         <div class="why-icon">🔍</div>
         <h3>Verificación RUNT Previa</h3>
-        <p>Antes de recibir cualquier pago, revisamos el RUNT para detectar embargos o bloqueos. Tu dinero siempre seguro.</p>
+        <p>Antes de recibir cualquier pago, revisamos el RUNT para detectar embargos o bloqueos. Tu dinero siempre
+          seguro.</p>
       </div>
       <div class="why-card">
         <div class="why-icon">🏠</div>
         <h3>Improntas a Domicilio</h3>
-        <p>Desplazamos a nuestro perito HASTA donde estás para tomar las improntas. Servicio exclusivo que nos diferencia.</p>
+        <p>Desplazamos a nuestro perito HASTA donde estás para tomar las improntas. Servicio exclusivo que nos
+          diferencia.</p>
       </div>
       <div class="why-card">
         <div class="why-icon">💰</div>
@@ -113,7 +122,7 @@
 
     <div class="service-cards">
 
-      <!-- CARD 1: Registro Automotor -->
+      <!-- ══ CARD 0: Registro Automotor ══ -->
       <div class="service-card" [class.expanded]="expanded[0]" id="service-0">
         <div class="service-card-header" (click)="toggleService(0)">
           <div class="service-card-icon-wrap">
@@ -122,36 +131,72 @@
           <div class="service-card-title-wrap">
             <span class="service-badge">Los más solicitados</span>
             <h3>Trámites de Registro Automotor</h3>
-            <p>Traspaso, prenda, traslado, duplicados y más</p>
+            <p>Matrículas, traspasos, placas, duplicados y mucho más</p>
           </div>
           <div class="service-toggle-icon">{{ expanded[0] ? '▲' : '▼' }}</div>
         </div>
         <div class="service-card-body">
           <div class="service-items">
+
+            <div class="service-item">
+              <div class="service-item-icon">📝</div>
+              <div>
+                <h4>Matrículas</h4>
+                <p>Matriculamos tu vehículo nuevo o importado ante la Secretaría de Tránsito. Vehículos particulares y
+                  públicos.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
             <div class="service-item">
               <div class="service-item-icon">👑</div>
               <div>
                 <h4>Traspaso de Propiedad</h4>
-                <p>El trámite más solicitado. Requiere contrato de compraventa, Formulario FUNT e improntas. <strong>Aplica para carros y motos.</strong></p>
+                <p>El trámite más solicitado. Requiere contrato de compraventa, Formulario FUNT e improntas. Aplica para
+                  carros y motos.</p>
                 <span class="price-tag">Tarifa: Consultar</span>
               </div>
             </div>
+
+            <div class="service-item">
+              <div class="service-item-icon">🔒</div>
+              <div>
+                <h4>Inscripción de Prenda</h4>
+                <p>Registramos la prenda sobre tu vehículo al momento de financiarlo. Proceso rápido y sin
+                  contratiempos.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
             <div class="service-item">
               <div class="service-item-icon">🔓</div>
               <div>
-                <h4>Levantamiento o Inscripción de Prenda</h4>
-                <p>¿Ya terminaste de pagar tu vehículo financiado? Liberamos la tarjeta de propiedad para que sea tuyo al 100%.</p>
+                <h4>Levantamiento de Prenda</h4>
+                <p>¿Ya terminaste de pagar tu vehículo financiado? Liberamos la tarjeta de propiedad para que sea tuyo
+                  al 100%.</p>
                 <span class="price-tag">Tarifa: Consultar</span>
               </div>
             </div>
+
             <div class="service-item">
-              <div class="service-item-icon">🗺️</div>
+              <div class="service-item-icon">🔄</div>
               <div>
-                <h4>Traslado y Radicado de Cuenta</h4>
-                <p>Para vehículos que llegan de otras ciudades a Pasto o viceversa. Un proceso largo que manejamos por completo.</p>
+                <h4>Cambio de Placas</h4>
+                <p>Gestión del cambio de placas por formato nuevo, por traslado de cuenta o por cualquier requerimiento
+                  oficial.</p>
                 <span class="price-tag">Tarifa: Consultar</span>
               </div>
             </div>
+
+            <div class="service-item">
+              <div class="service-item-icon">🔵</div>
+              <div>
+                <h4>Duplicado de Placas</h4>
+                <p>Placas perdidas, robadas o deterioradas. Tramitamos el duplicado ante la autoridad competente.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
             <div class="service-item">
               <div class="service-item-icon">📄</div>
               <div>
@@ -160,106 +205,259 @@
                 <span class="price-tag">Tarifa: Consultar</span>
               </div>
             </div>
+
             <div class="service-item">
               <div class="service-item-icon">🎨</div>
               <div>
-                <h4>Cambio de Color o Motor</h4>
-                <p>Requiere peritaje previo. Coordinamos el perito y gestionamos el cambio en el RUNT.</p>
+                <h4>Cambio de Color</h4>
+                <p>Actualizamos el color del vehículo en el RUNT. Coordinamos el peritaje previo si aplica.</p>
                 <span class="price-tag">Tarifa: Consultar</span>
               </div>
             </div>
+
+            <div class="service-item">
+              <div class="service-item-icon">🗺️</div>
+              <div>
+                <h4>Traslado y Radicado de Cuenta</h4>
+                <p>Para vehículos que llegan de otras ciudades a Pasto o viceversa. Un proceso largo que manejamos por
+                  completo.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item-icon">📜</div>
+              <div>
+                <h4>Certificados de Tradición</h4>
+                <p>Obtenemos el certificado que acredita el historial de propietarios del vehículo. Indispensable en
+                  compraventas.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item-icon">❌</div>
+              <div>
+                <h4>Cancelación de Matrícula</h4>
+                <p>Para vehículos siniestrados totales, chatarrizados o que dejan de circular. Realizamos el proceso
+                  oficial ante la STTM.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
           </div>
           <a href="https://wa.me/573137733408?text=Hola%2C%20quisiera%20información%20sobre%20Registro%20Automotor"
-             target="_blank" rel="noopener" class="service-cta">
+            target="_blank" rel="noopener" class="service-cta">
             💬 Consultar este servicio
           </a>
         </div>
       </div>
 
-      <!-- CARD 2: Licencias -->
+      <!-- ══ CARD 1: Regrabaciones & Peritajes (NUEVO) ══ -->
       <div class="service-card" [class.expanded]="expanded[1]" id="service-1">
         <div class="service-card-header" (click)="toggleService(1)">
+          <div class="service-card-icon-wrap">
+            <div class="service-icon">🔧</div>
+          </div>
+          <div class="service-card-title-wrap">
+            <span class="service-badge">Servicio técnico especializado</span>
+            <h3>Regrabaciones, Peritajes y Maquinaria</h3>
+            <p>Motor, chasis, serie, chequeos en Sijin y maquinaria pesada</p>
+          </div>
+          <div class="service-toggle-icon">{{ expanded[1] ? '▲' : '▼' }}</div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-items">
+
+            <div class="service-item">
+              <div class="service-item-icon">⚙️</div>
+              <div>
+                <h4>Regrabación de Motor</h4>
+                <p>Grabamos o restauramos el número de motor cuando está ilegible o fue cambiado. Proceso oficial ante
+                  la STTM con visita del perito.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item-icon">🔩</div>
+              <div>
+                <h4>Regrabación de Chasis</h4>
+                <p>Recuperamos o corregimos la gravación del chasis para que corresponda con los documentos del
+                  vehículo.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item-icon">🔖</div>
+              <div>
+                <h4>Regrabación de Serie</h4>
+                <p>Trámite oficial para corregir o recuperar el número de serie del vehículo ante las autoridades
+                  competentes.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item-icon">🔍</div>
+              <div>
+                <h4>Chequeos Técnicos en Sijin</h4>
+                <p>Coordinamos la inspección técnica en la Sijin para verificar series, motor y estado del vehículo.
+                  Ideal antes de una compraventa.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item-icon">🏗️</div>
+              <div>
+                <h4>Registro de Maquinaria Pesada</h4>
+                <p>Registramos maquinaria agrícola, de construcción e industrial ante la Secretaría. Bulldozers,
+                  retroexcavadoras, volquetas y más.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="info-box">
+            <strong>ℹ️ Nota:</strong> Todos los trámites de regrabación requieren visita previa del perito al vehículo.
+            Coordinamos la cita en el lugar donde se encuentre.
+          </div>
+          <a href="https://wa.me/573137733408?text=Hola%2C%20quisiera%20información%20sobre%20Regrabaciones%20o%20Peritajes"
+            target="_blank" rel="noopener" class="service-cta">
+            💬 Consultar este servicio
+          </a>
+        </div>
+      </div>
+
+      <!-- ══ CARD 2: Licencias de Conducción ══ -->
+      <div class="service-card" [class.expanded]="expanded[2]" id="service-2">
+        <div class="service-card-header" (click)="toggleService(2)">
           <div class="service-card-icon-wrap">
             <div class="service-icon">📋</div>
           </div>
           <div class="service-card-title-wrap">
             <span class="service-badge">Agilizamos el proceso</span>
             <h3>Licencias de Conducción</h3>
-            <p>Agendamiento de citas y validación de requisitos</p>
-          </div>
-          <div class="service-toggle-icon">{{ expanded[1] ? '▲' : '▼' }}</div>
-        </div>
-        <div class="service-card-body">
-          <div class="service-items">
-            <div class="service-item">
-              <div class="service-item-icon">📅</div>
-              <div>
-                <h4>Agendamiento de Citas</h4>
-                <p>Muchos usuarios no saben usar la plataforma de la STTM. Agendamos tu cita para primera vez, renovación o recategorización en la fecha más próxima disponible.</p>
-                <span class="price-tag">Tarifa: Consultar</span>
-              </div>
-            </div>
-            <div class="service-item">
-              <div class="service-item-icon">✔️</div>
-              <div>
-                <h4>Validación de Requisitos (CRC)</h4>
-                <p>Verificamos que tus exámenes médicos (Centro de Reconocimiento de Conductores) estén correctamente cargados en el RUNT antes de que vayas a la sede. Evitas ir en vano.</p>
-                <span class="price-tag">Tarifa: Consultar</span>
-              </div>
-            </div>
-          </div>
-          <div class="info-box">
-            <strong>ℹ️ Nota:</strong> La foto y la firma se toman presencialmente en la sede (biometría obligatoria). Nosotros te acompañamos en todo lo demás.
-          </div>
-          <a href="https://wa.me/573137733408?text=Hola%2C%20quisiera%20información%20sobre%20mi%20Licencia%20de%20Conducción"
-             target="_blank" rel="noopener" class="service-cta">
-            💬 Consultar este servicio
-          </a>
-        </div>
-      </div>
-
-      <!-- CARD 3: Infracciones -->
-      <div class="service-card urgent" [class.expanded]="expanded[2]" id="service-2">
-        <div class="service-card-header" (click)="toggleService(2)">
-          <div class="service-card-icon-wrap">
-            <div class="service-icon">⚠️</div>
-          </div>
-          <div class="service-card-title-wrap">
-            <span class="service-badge urgent-badge">Servicio de urgencia</span>
-            <h3>Infracciones y Salida de Patios</h3>
-            <p>Gestión rápida de comparendos y vehículos inmovilizados</p>
+            <p>Iniciales, renovaciones, agendamiento y validación — cualquier categoría</p>
           </div>
           <div class="service-toggle-icon">{{ expanded[2] ? '▲' : '▼' }}</div>
         </div>
         <div class="service-card-body">
           <div class="service-items">
+
+            <div class="service-item">
+              <div class="service-item-icon">🆕</div>
+              <div>
+                <h4>Licencias Iniciales — Cualquier Categoría</h4>
+                <p>¿Primera licencia? Gestionamos el proceso completo: revisamos requisitos, verificamos el CRC en el
+                  RUNT y agendamos tu cita para A1, A2, B1, B2, B3, C1, C2, C3.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item-icon">🔄</div>
+              <div>
+                <h4>Renovaciones — Cualquier Categoría</h4>
+                <p>Licencia vencida o próxima a vencer. Agendamos, validamos el examen médico vigente y acompañamos en
+                  todo el proceso de renovación.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item-icon">📅</div>
+              <div>
+                <h4>Agendamiento de Citas</h4>
+                <p>Muchos usuarios no saben usar la plataforma de la STTM. Agendamos tu cita en la fecha más próxima
+                  disponible.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-item-icon">✔️</div>
+              <div>
+                <h4>Validación de Requisitos (CRC)</h4>
+                <p>Verificamos que tus exámenes médicos (Centro de Reconocimiento de Conductores) estén correctamente
+                  cargados en el RUNT antes de que vayas a la sede. Evitas ir en vano.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="info-box">
+            <strong>ℹ️ Nota:</strong> La foto y la firma se toman presencialmente en la sede (biometría obligatoria).
+            Nosotros te acompañamos en todo lo demás.
+          </div>
+          <a href="https://wa.me/573137733408?text=Hola%2C%20quisiera%20información%20sobre%20mi%20Licencia%20de%20Conducción"
+            target="_blank" rel="noopener" class="service-cta">
+            💬 Consultar este servicio
+          </a>
+        </div>
+      </div>
+
+      <!-- ══ CARD 3: Infracciones, Comparendos y Patios ══ -->
+      <div class="service-card urgent" [class.expanded]="expanded[3]" id="service-3">
+        <div class="service-card-header" (click)="toggleService(3)">
+          <div class="service-card-icon-wrap">
+            <div class="service-icon">⚠️</div>
+          </div>
+          <div class="service-card-title-wrap">
+            <span class="service-badge urgent-badge">Servicio de urgencia</span>
+            <h3>Infracciones, Comparendos y Patios</h3>
+            <p>Cursos, salida de patios, audiencias y acuerdos de pago</p>
+          </div>
+          <div class="service-toggle-icon">{{ expanded[3] ? '▲' : '▼' }}</div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-items">
+
+            <div class="service-item">
+              <div class="service-item-icon">📚</div>
+              <div>
+                <h4>Curso de Comparendos y Pago de Multas</h4>
+                <p>Gestionamos la venta del curso de comparendos requerido por la STTM y realizamos el pago de tus
+                  multas de tránsito. Evita el cobro coactivo.</p>
+                <span class="price-tag">Tarifa: Consultar</span>
+              </div>
+            </div>
+
             <div class="service-item">
               <div class="service-item-icon">🏭</div>
               <div>
                 <h4>Orden de Salida de Vehículos (Patios)</h4>
-                <p>Tu vehículo inmovilizado en el patio. Recogemos los documentos (SOAT, Tecno, Licencia), hacemos la fila para liquidación de grúa y parqueadero, y agilizamos tu salida.</p>
+                <p>Tu vehículo inmovilizado en el patio. Recogemos los documentos (SOAT, Tecno, Licencia), hacemos la
+                  fila para liquidación de grúa y parqueadero, y agilizamos tu salida.</p>
                 <span class="price-tag">Tarifa: Consultar</span>
               </div>
             </div>
+
             <div class="service-item">
               <div class="service-item-icon">⚖️</div>
               <div>
                 <h4>Solicitud de Audiencias</h4>
-                <p>¿Quieres impugnar un comparendo? Radicamos tus descargos ante la Secretaría con los argumentos y evidencias necesarias.</p>
+                <p>¿Quieres impugnar un comparendo? Radicamos tus descargos ante la Secretaría con los argumentos y
+                  evidencias necesarias.</p>
                 <span class="price-tag">Tarifa: Consultar</span>
               </div>
             </div>
+
             <div class="service-item">
               <div class="service-item-icon">🤝</div>
               <div>
                 <h4>Acuerdos de Pago de Multas</h4>
-                <p>Gestionamos la documentación para que puedas diferir tus multas en cuotas y ponerte al día con la Secretaría.</p>
+                <p>Gestionamos la documentación para que puedas diferir tus multas en cuotas y ponerte al día con la
+                  Secretaría.</p>
                 <span class="price-tag">Tarifa: Consultar</span>
               </div>
             </div>
+
           </div>
           <a href="https://wa.me/573137733408?text=Hola%2C%20es%20urgente%21%20Necesito%20ayuda%20con%20una%20infracción%20o%20patio"
-             target="_blank" rel="noopener" class="service-cta urgent-cta">
+            target="_blank" rel="noopener" class="service-cta urgent-cta">
             🚨 ¡Es urgente! Contáctanos ya
           </a>
         </div>
@@ -324,14 +522,26 @@
         </thead>
         <tbody>
           <tr>
+            <td><strong>Matrícula</strong></td>
+            <td>Factura de compra · SOAT · Revisión técnico-mecánica · Cédula propietario</td>
+            <td>Para vehículos nuevos o importados. Se asignan placas.</td>
+          </tr>
+          <tr>
             <td><strong>Traspaso de Propiedad</strong></td>
-            <td>Cédulas vendedor y comprador · Tarjeta de propiedad · Contrato de compraventa · Formulario FUNT · SOAT vigente · Revisión técnico-mecánica</td>
+            <td>Cédulas vendedor y comprador · Tarjeta de propiedad · Contrato de compraventa · Formulario FUNT · SOAT
+              vigente · Revisión técnico-mecánica</td>
             <td>Se toman improntas al vehículo. Verificación RUNT previa obligatoria.</td>
           </tr>
           <tr>
-            <td><strong>Levantamiento de Prenda</strong></td>
-            <td>Tarjeta de propiedad · Paz y salvo del acreedor · Cédula del propietario</td>
-            <td>El banco o financiera debe emitir el paz y salvo oficial.</td>
+            <td><strong>Inscripción / Levantamiento de Prenda</strong></td>
+            <td>Tarjeta de propiedad · Paz y salvo del acreedor (levante) · Cédula propietario · Carta de la entidad
+              financiera</td>
+            <td>El banco o financiera debe emitir el paz y salvo oficial para el levante.</td>
+          </tr>
+          <tr>
+            <td><strong>Cambio / Duplicado de Placas</strong></td>
+            <td>Tarjeta de propiedad · Cédula · Denuncia (si es por robo) · Formulario FUNT</td>
+            <td>Aplica también para cambio de formato o traslado de ciudad.</td>
           </tr>
           <tr>
             <td><strong>Traslado / Radicado</strong></td>
@@ -339,19 +549,34 @@
             <td>Proceso de 15 a 30 días hábiles aproximadamente.</td>
           </tr>
           <tr>
-            <td><strong>Duplicado Licencia de Tránsito</strong></td>
+            <td><strong>Duplicado Lic. de Tránsito</strong></td>
             <td>Cédula propietario · Denuncia de pérdida o robo · Formulario FUNT</td>
             <td>Si hay prenda activa, se refleja en el duplicado.</td>
           </tr>
           <tr>
-            <td><strong>Cambio de Color / Motor</strong></td>
-            <td>Tarjeta de propiedad · Cédula · Peritaje previo · Factura del motor (si aplica)</td>
-            <td>Coordinamos el perijate. Requiere visita al vehículo.</td>
+            <td><strong>Regrabación Motor / Chasis / Serie</strong></td>
+            <td>Tarjeta de propiedad · Cédula · Peritaje previo · Documentos del vehículo</td>
+            <td>Requiere visita del perito. Coordinamos desplazamiento.</td>
+          </tr>
+          <tr>
+            <td><strong>Chequeo Técnico Sijin</strong></td>
+            <td>Documentos del vehículo · Cédula propietario · SOAT</td>
+            <td>Recomendado antes de comprar un vehículo usado.</td>
+          </tr>
+          <tr>
+            <td><strong>Cancelación de Matrícula</strong></td>
+            <td>Tarjeta de propiedad · Cédula · Acta de chatarización o siniestro total</td>
+            <td>Para vehículos siniestrados, chatarrizados o fuera de circulación.</td>
           </tr>
           <tr>
             <td><strong>Licencia de Conducción</strong></td>
             <td>Cédula · Examen médico CRC vigente · Fotos · Pago de derechos</td>
             <td>Biometría (foto y firma) siempre presencial en sede STTM.</td>
+          </tr>
+          <tr>
+            <td><strong>Curso de Comparendos / Multas</strong></td>
+            <td>Cédula · Número de comparendo · Resolución del comparendo</td>
+            <td>Evita cobro coactivo. Gestionar a la mayor brevedad.</td>
           </tr>
           <tr>
             <td><strong>Salida de Patios</strong></td>
@@ -363,7 +588,10 @@
     </div>
     <div class="req-note">
       <span>⚠️</span>
-      <p><strong>Nota experta:</strong> Los requisitos pueden variar. Siempre verificamos el estado actualizado en el RUNT antes de iniciar cualquier trámite. <a href="https://wa.me/573137733408?text=Hola%2C%20tengo%20una%20duda%20sobre%20los%20requisitos" target="_blank" rel="noopener">Consúltanos antes de reunir documentos.</a></p>
+      <p><strong>Nota experta:</strong> Los requisitos pueden variar. Siempre verificamos el estado actualizado en el
+        RUNT antes de iniciar cualquier trámite. <a
+          href="https://wa.me/573137733408?text=Hola%2C%20tengo%20una%20duda%20sobre%20los%20requisitos" target="_blank"
+          rel="noopener">Consúltanos antes de reunir documentos.</a></p>
     </div>
   </div>
 </section>
@@ -382,14 +610,14 @@
         <h3>WhatsApp</h3>
         <p>Atención personalizada de lunes a sábado</p>
         <a href="https://wa.me/573137733408?text=Hola%2C%20quisiera%20información%20sobre%20un%20trámite"
-           target="_blank" rel="noopener" class="contact-link">
+          target="_blank" rel="noopener" class="contact-link">
           +57 313 773 3408
         </a>
       </div>
       <div class="contact-card">
         <div class="contact-icon">📍</div>
         <h3>Ciudad</h3>
-        <p>Cubrimos toda el área metropolitana</p>
+        <p>Cobertura total en los departamentos de Nariño y Valle del Cauca</p>
         <span class="contact-link">San Juan de Pasto, Nariño</span>
       </div>
       <div class="contact-card">
@@ -401,7 +629,7 @@
     </div>
     <div class="contact-cta">
       <a href="https://wa.me/573137733408?text=Hola%20TTP%21%20Quisiera%20información%20sobre%20un%20trámite%20de%20tránsito%20en%20Pasto"
-         target="_blank" rel="noopener" class="btn-primary large">
+        target="_blank" rel="noopener" class="btn-primary large">
         💬 Iniciar conversación en WhatsApp
       </a>
     </div>
@@ -414,13 +642,15 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="assets/logo-ttp.png" alt="TTP" class="footer-logo">
-        <p>Gestores especializados en trámites ante la Secretaría de Tránsito y Transporte de Pasto. Su confianza es nuestro compromiso.</p>
+        <p>Gestores especializados en trámites ante la Secretaría de Tránsito y Transporte de Pasto. Su confianza es
+          nuestro compromiso.</p>
       </div>
       <div class="footer-links">
         <h4>Servicios</h4>
-        <a href="#servicios" (click)="closeMenu()">Registro Automotor</a>
-        <a href="#servicios" (click)="closeMenu()">Licencias de Conducción</a>
-        <a href="#servicios" (click)="closeMenu()">Infracciones y Patios</a>
+        <a href="#servicios">Registro Automotor</a>
+        <a href="#servicios">Regrabaciones y Peritajes</a>
+        <a href="#servicios">Licencias de Conducción</a>
+        <a href="#servicios">Infracciones y Patios</a>
       </div>
       <div class="footer-links">
         <h4>Información</h4>
@@ -431,16 +661,18 @@
     </div>
     <div class="footer-bottom">
       <p>© 2026 TTP — Trámites Tránsito Pasto. "Lo hacemos por tí."</p>
-      <p class="footer-legal">Tramitador independiente. No somos la Secretaría de Tránsito y Transporte Municipal de Pasto.</p>
+      <p class="footer-legal">Tramitador independiente. No somos la Secretaría de Tránsito y Transporte Municipal de
+        Pasto.</p>
     </div>
   </div>
 </footer>
 
 <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
 <a href="https://wa.me/573137733408?text=Hola%20TTP%21%20Necesito%20ayuda%20con%20un%20trámite%20de%20tránsito"
-   class="fab-whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  class="fab-whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.967 1.168-.173.19-.347.21-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    <path
+      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.967 1.168-.173.19-.347.21-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
   </svg>
   <span class="fab-tooltip">¡Escríbenos!</span>
 </a>
