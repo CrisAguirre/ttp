@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ttp';
+  menuOpen = false;
+  expanded: boolean[] = [false, false, false];
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+  }
+
+  toggleService(index: number) {
+    this.expanded[index] = !this.expanded[index];
+  }
 }
