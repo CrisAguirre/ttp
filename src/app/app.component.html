@@ -1,13 +1,13 @@
 <!-- ===== PAGE LOADER ===== -->
 <div class="page-loader" [class.loader-hidden]="isLoaded">
-  <img src="assets/logo-ttp.png" alt="TTP Cargando…" class="loader-logo">
+  <img src="assets/logo.png" alt="TTP Cargando…" class="loader-logo">
 </div>
 
 <!-- ===== NAVBAR ===== -->
 <nav class="navbar" id="top">
   <div class="nav-container">
     <a href="#top" class="nav-brand">
-      <img src="assets/logo-ttp.png" alt="TTP Trámites Tránsito Pasto" class="nav-logo">
+      <img src="assets/logo.png" alt="TTP Trámites Tránsito Pasto" class="nav-logo">
     </a>
     <button class="hamburger" id="hamburger" (click)="toggleMenu()" [class.open]="menuOpen" aria-label="Menú">
       <span></span><span></span><span></span>
@@ -30,7 +30,7 @@
   <div class="hero-bg"></div>
   <div class="hero-content">
     <div class="hero-badge">🏆 Gestores especializados en tránsito — Pasto, Nariño</div>
-    <img src="assets/logo-ttp.png" alt="TTP" class="hero-logo" loading="eager">
+    <img src="assets/logo.png" alt="TTP" class="hero-logo" loading="eager">
     <p class="hero-tagline">Trámites ante la Secretaría de Tránsito de Pasto</p>
     <p class="hero-sub">
       Traspaso de vehículos, levantamiento de prenda, salida de patios, regrabaciones y más. <strong>Nosotros hacemos
@@ -641,7 +641,7 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="assets/logo-ttp.png" alt="TTP" class="footer-logo">
+        <img src="assets/logo.png" alt="TTP" class="footer-logo">
         <p>Gestores especializados en trámites ante la Secretaría de Tránsito y Transporte de Pasto. Su confianza es
           nuestro compromiso.</p>
       </div>
@@ -660,8 +660,9 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 TTP — Trámites Tránsito Pasto. "Lo hacemos por tí."</p>
-      <p class="footer-legal">Tramitador independiente. No somos la Secretaría de Tránsito y Transporte Municipal de
+      <p>©2026 TTP Trámites Tránsito Pasto.</p>
+      <p class="footer-legal">Servicio de tramites en linea, no pertenecemos a la Secretaría de Tránsito y Transporte
+        Municipal de
         Pasto.</p>
     </div>
   </div>
@@ -676,3 +677,39 @@
   </svg>
   <span class="fab-tooltip">¡Escríbenos!</span>
 </a>
+
+<!-- ===== CUY-TTP VIRTUAL ASSISTANT ===== -->
+<div class="chat-widget-container" [class.chat-open]="chatOpen">
+  
+  <div class="chat-window" *ngIf="chatOpen">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <img src="assets/cuy.png" alt="Operador TTP" class="chat-avatar">
+        <div>
+          <h4>Operador TTP</h4>
+          <span>Asistente Virtual en Línea</span>
+        </div>
+      </div>
+      <button class="chat-close" (click)="closeChat()" aria-label="Cerrar chat">×</button>
+    </div>
+    
+    <div class="chat-body" #chatScroll>
+      <div *ngFor="let msg of chatMessages" class="chat-bubble-wrap" [class.user]="msg.sender === 'user'">
+        <img *ngIf="msg.sender === 'cuy'" src="assets/cuy.png" class="chat-cuy-icon" alt="Cuy">
+        <div class="chat-bubble {{msg.sender}}">
+          {{ msg.text }}
+        </div>
+      </div>
+      <div *ngIf="chatOptions.length > 0" class="chat-options">
+        <button *ngFor="let opt of chatOptions" class="chat-option-btn" (click)="handleOption(opt)">
+          {{ opt.text }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <button class="fab-cuy" (click)="toggleChat()" aria-label="Abrir asistente Operador TTP">
+    <span class="fab-cuy-badge" *ngIf="!chatOpen">1</span>
+    <img src="assets/cuy.png" alt="Ayuda" class="cuy-icon">
+  </button>
+</div>
