@@ -32,9 +32,8 @@
     <div class="hero-badge">🏆 Gestores especializados en tránsito — Pasto, Nariño</div>
     <img src="assets/logo.png" alt="TTP" class="hero-logo" loading="eager">
     <p class="hero-tagline">Trámites ante la Secretaría de Tránsito de Pasto</p>
-    <p class="hero-sub">
-      Traspaso de vehículos, levantamiento de prenda, salida de patios, regrabaciones y más. <strong>Nosotros hacemos
-        todo por ti</strong> sin que tengas que hacer filas ni perder el día.
+    <p class="hero-sub scroll-anim delay-100">
+      Nos encargamos del papeleo, las filas y la gestión en la Secretaría. <strong>Tu trámite sin dolores de cabeza.</strong>
     </p>
     <div class="hero-ctas">
       <a href="https://wa.me/573137733408?text=Hola%2C%20quisiera%20información%20sobre%20un%20trámite%20de%20tránsito"
@@ -74,38 +73,35 @@
       <h2>Tu trámite, en las mejores manos</h2>
     </div>
     <div class="why-grid">
-      <div class="why-card">
+      <div class="why-card scroll-anim">
         <div class="why-icon">⚡</div>
         <h3>Rapidez Garantizada</h3>
-        <p>Gestionamos tu trámite sin que pierdas tiempo en filas. Recogemos y entregamos documentos a domicilio en
-          Pasto.</p>
+        <p>Cero filas. Recogemos y entregamos tus documentos a domicilio en Pasto.</p>
       </div>
-      <div class="why-card highlight">
+      <div class="why-card highlight scroll-anim delay-100">
         <div class="why-icon">🔍</div>
-        <h3>Verificación RUNT Previa</h3>
-        <p>Antes de recibir cualquier pago, revisamos el RUNT para detectar embargos o bloqueos. Tu dinero siempre
-          seguro.</p>
+        <h3>Verificación RUNT</h3>
+        <p>Revisamos posibles embargos o bloqueos preventivamente. Tu dinero siempre seguro.</p>
       </div>
-      <div class="why-card">
+      <div class="why-card scroll-anim delay-200">
         <div class="why-icon">🏠</div>
         <h3>Improntas a Domicilio</h3>
-        <p>Desplazamos a nuestro perito HASTA donde estás para tomar las improntas. Servicio exclusivo que nos
-          diferencia.</p>
+        <p>Enviamos un perito certificado directamente a tu vehículo para las improntas.</p>
       </div>
-      <div class="why-card">
+      <div class="why-card scroll-anim delay-300">
         <div class="why-icon">💰</div>
-        <h3>Tarifas Transparentes</h3>
-        <p>Publicamos los costos oficiales de la Secretaría por separado de nuestra comisión. Sin cobros ocultos.</p>
+        <h3>Tarifas Claras</h3>
+        <p>Costos oficiales separados de nuestra gestión. Sin sorpresas ni cobros ocultos.</p>
       </div>
-      <div class="why-card">
+      <div class="why-card scroll-anim delay-400">
         <div class="why-icon">📞</div>
-        <h3>Acompañamiento Total</h3>
-        <p>Te informamos de cada paso de tu trámite en tiempo real por WhatsApp. Siempre conectados.</p>
+        <h3>Acompañamiento</h3>
+        <p>Información en tiempo real de tu trámite, siempre conectados por WhatsApp.</p>
       </div>
-      <div class="why-card">
+      <div class="why-card scroll-anim delay-500">
         <div class="why-icon">✅</div>
-        <h3>Experiencia Comprobada</h3>
-        <p>Conocemos todos los requisitos, formatos (FUNT, RUNT) y procesos actualizados de la STTM Pasto.</p>
+        <h3>Experiencia</h3>
+        <p>Conocemos todo el proceso y la gestión en la STTM Pasto de forma integral.</p>
       </div>
     </div>
   </div>
@@ -114,16 +110,16 @@
 <!-- ===== SERVICES ===== -->
 <section class="services" id="servicios">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header scroll-anim">
       <span class="section-tag">Nuestros Servicios</span>
       <h2>Todo lo que necesitas en un solo lugar</h2>
-      <p>Haz clic en cada categoría para ver los trámites disponibles</p>
+      <p>Haz clic en cada categoría para ver los detalles</p>
     </div>
 
     <div class="service-cards">
 
       <!-- ══ CARD 0: Registro Automotor ══ -->
-      <div class="service-card" [class.expanded]="expanded[0]" id="service-0">
+      <div class="service-card scroll-anim delay-100" [class.expanded]="expanded[0]" id="service-0">
         <div class="service-card-header" (click)="toggleService(0)">
           <div class="service-card-icon-wrap">
             <div class="service-icon">🚗</div>
@@ -332,7 +328,7 @@
       </div>
 
       <!-- ══ CARD 2: Licencias de Conducción ══ -->
-      <div class="service-card" [class.expanded]="expanded[2]" id="service-2">
+      <div class="service-card scroll-anim delay-300" [class.expanded]="expanded[2]" id="service-2">
         <div class="service-card-header" (click)="toggleService(2)">
           <div class="service-card-icon-wrap">
             <div class="service-icon">📋</div>
@@ -400,7 +396,7 @@
       </div>
 
       <!-- ══ CARD 3: Infracciones, Comparendos y Patios ══ -->
-      <div class="service-card urgent" [class.expanded]="expanded[3]" id="service-3">
+      <div class="service-card urgent scroll-anim delay-400" [class.expanded]="expanded[3]" id="service-3">
         <div class="service-card-header" (click)="toggleService(3)">
           <div class="service-card-icon-wrap">
             <div class="service-icon">⚠️</div>
@@ -470,34 +466,34 @@
 <!-- ===== HOW IT WORKS ===== -->
 <section class="how-it-works" id="como-funciona">
   <div class="container">
-    <div class="section-header light">
+    <div class="section-header light scroll-anim">
       <span class="section-tag">Proceso simple</span>
       <h2>¿Cómo funciona?</h2>
-      <p>En 4 pasos sencillos tu trámite estará resuelto</p>
+      <p>En 4 rápidos pasos tu trámite estará resuelto</p>
     </div>
     <div class="steps">
-      <div class="step">
+      <div class="step scroll-anim delay-100">
         <div class="step-num">1</div>
         <h3>Contáctanos</h3>
-        <p>Escríbenos por WhatsApp y cuéntanos qué trámite necesitas.</p>
+        <p>Escríbenos y cuéntanos qué trámite necesitas.</p>
       </div>
-      <div class="step-arrow">→</div>
-      <div class="step">
+      <div class="step-arrow scroll-anim delay-100">→</div>
+      <div class="step scroll-anim delay-200">
         <div class="step-num">2</div>
         <h3>Verificación RUNT</h3>
-        <p>Revisamos el estado del vehículo y confirmamos que no haya embargos antes de proceder.</p>
+        <p>Confirmamos el estado actual y viabilidad.</p>
       </div>
-      <div class="step-arrow">→</div>
-      <div class="step">
+      <div class="step-arrow scroll-anim delay-200">→</div>
+      <div class="step scroll-anim delay-300">
         <div class="step-num">3</div>
-        <h3>Recolectamos Documentos</h3>
-        <p>Vamos hasta donde estás, recogemos documentos e improntas (si aplica).</p>
+        <h3>Gestión de Docs</h3>
+        <p>Recogemos documentos e improntas a tu ubicación.</p>
       </div>
-      <div class="step-arrow">→</div>
-      <div class="step">
+      <div class="step-arrow scroll-anim delay-300">→</div>
+      <div class="step scroll-anim delay-400">
         <div class="step-num">4</div>
-        <h3>¡Listo!</h3>
-        <p>Gestionamos todo en la Secretaría y te entregamos el resultado en tu casa.</p>
+        <h3>¡Trámite Listo!</h3>
+        <p>Realizamos el proceso y te entregamos el resultado.</p>
       </div>
     </div>
   </div>

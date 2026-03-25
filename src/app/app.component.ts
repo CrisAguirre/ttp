@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 
 interface ChatMessage {
   sender: 'cuy' | 'user';
@@ -25,11 +25,27 @@ export class AppComponent implements OnInit {
   chatMessages: ChatMessage[] = [];
   chatOptions: ChatOption[] = [];
 
+  constructor(private el: ElementRef) {}
+
   ngOnInit(): void {
     // Hide loader after 2.2s (2s animation + 0.2s buffer for fade)
     setTimeout(() => {
       this.isLoaded = true;
     }, 1500);
+  }
+
+  ngAfterViewInit(): void {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Animates only once
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    const animatedElements = this.el.nativeElement.querySelectorAll('.scroll-anim');
+    animatedElements.forEach((el: Element) => observer.observe(el));
   }
 
   toggleMenu() {
