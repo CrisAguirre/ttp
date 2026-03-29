@@ -33,7 +33,8 @@
     <img src="assets/logo.png" alt="TTP" class="hero-logo" loading="eager">
     <p class="hero-tagline">Trámites ante la Secretaría de Tránsito de Pasto</p>
     <p class="hero-sub scroll-anim delay-100">
-      Nos encargamos del papeleo, las filas y la gestión en la Secretaría. <strong>Tu trámite sin dolores de cabeza.</strong>
+      Nos encargamos del papeleo, las filas y la gestión en la Secretaría. <strong>Tu trámite sin dolores de
+        cabeza.</strong>
     </p>
     <div class="hero-ctas">
       <a href="https://wa.me/573137733408?text=Hola%2C%20quisiera%20información%20sobre%20un%20trámite%20de%20tránsito"
@@ -519,7 +520,7 @@
         <tbody>
           <tr>
             <td><strong>Matrícula</strong></td>
-            <td>Factura de compra · SOAT · Revisión técnico-mecánica · Cédula propietario</td>
+            <td>Factura de compra · SOAT · Cédula propietario · Matrícula de importación</td>
             <td>Para vehículos nuevos o importados. Se asignan placas.</td>
           </tr>
           <tr>
@@ -602,9 +603,9 @@
     </div>
     <div class="contact-grid">
       <div class="contact-card">
-        <div class="contact-icon">💬</div>
-        <h3>WhatsApp</h3>
-        <p>Atención personalizada de lunes a sábado</p>
+        <div class="contact-icon">🕒</div>
+        <h3>Atención inmediata</h3>
+        <p>Atención personalizada de lunes a sábado en jornada continua de 8:00 am a 6:00 pm</p>
         <a href="https://wa.me/573137733408?text=Hola%2C%20quisiera%20información%20sobre%20un%20trámite"
           target="_blank" rel="noopener" class="contact-link">
           +57 313 773 3408
@@ -612,15 +613,16 @@
       </div>
       <div class="contact-card">
         <div class="contact-icon">📍</div>
-        <h3>Ciudad</h3>
-        <p>Cobertura total en los departamentos de Nariño y Valle del Cauca</p>
-        <span class="contact-link">San Juan de Pasto, Nariño</span>
+        <h3>Cobertura en 3 departamentos</h3>
+        <p>Cobertura total en los departamentos de Nariño, Quindio y Valle del Cauca</p>
+        <span class="contact-link">Oficina principal: Pasto, Nariño</span>
       </div>
       <div class="contact-card">
-        <div class="contact-icon">🕒</div>
-        <h3>Horario</h3>
-        <p>Disponibles cuando nos necesitas</p>
-        <span class="contact-link">Lun – Sáb: 8:00 am – 6:00 pm</span>
+        <div class="contact-icon">💬</div>
+        <h3>Cotización de servicios</h3>
+        <p>Cotiza con nosotros y conoce en detalle todas las funciones e
+          itinerario de tu solicitud</p>
+        <span class="contact-link">Conoce nuestros servicios</span>
       </div>
     </div>
     <div class="contact-cta">
@@ -676,7 +678,7 @@
 
 <!-- ===== CUY-TTP VIRTUAL ASSISTANT ===== -->
 <div class="chat-widget-container" [class.chat-open]="chatOpen">
-  
+
   <div class="chat-window" *ngIf="chatOpen">
     <div class="chat-header">
       <div class="chat-header-info">
@@ -688,7 +690,7 @@
       </div>
       <button class="chat-close" (click)="closeChat()" aria-label="Cerrar chat">×</button>
     </div>
-    
+
     <div class="chat-body" #chatScroll>
       <div *ngFor="let msg of chatMessages" class="chat-bubble-wrap" [class.user]="msg.sender === 'user'">
         <img *ngIf="msg.sender === 'cuy'" src="assets/cuy.png" class="chat-cuy-icon" alt="Cuy">
